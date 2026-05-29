@@ -12,76 +12,74 @@
             color: #333333;
         }
         header {
-            border: 3px solid #B0B0B0;
+            border: 5px solid #000000;
             padding: 20px;
             background-color: #FFFFFF;
             margin-bottom: 20px;
             text-align: center;
         }
+        .logo-box {
+            border: 4px solid #34495E;
+            padding: 10px;
+            display: inline-block;
+            background-color: #FFFFFF;
+            margin-bottom: 15px;
+        }
         h1 {
-            font-size: 20px;
+            font-size: 22px;
             margin: 10px 0 0 0;
-            color: #444444;
-            font-style: italic;
+            color: #2C3E50;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
-        .contenedor-layout {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-        }
-        .columna-izquierda {
-            display: table-cell;
-            width: 200px;
-            vertical-align: top;
-            padding-right: 20px;
-        }
-        .columna-derecha {
-            display: table-cell;
-            vertical-align: top;
-            border: 3px solid #B0B0B0;
-            padding: 25px;
-            background-color: #FFFFFF;
-        }
+        /* Barra de navegación exacta a tu captura */
         nav {
-            border: 3px solid #B0B0B0;
+            border: 4px dashed #000000;
             padding: 15px;
-            background-color: #FFFFFF;
+            background-color: #E67E22;
+            margin-bottom: 20px;
+            text-align: center;
         }
         .btn-menu {
-            display: block;
+            display: inline-block;
             text-decoration: none;
-            color: #333333;
-            background-color: #FFF2E6;
+            color: #000000;
+            background-color: #FFFFFF;
             font-weight: bold;
-            padding: 10px;
-            border: 1px solid #CCCCCC;
-            margin-bottom: 8px;
-            font-size: 13px;
-            text-align: center;
+            padding: 8px 18px;
+            border: 3px solid #000000;
+            margin: 0 5px;
+            font-size: 12px;
         }
         .btn-menu:hover {
             background-color: #FFE4CC;
         }
+        .contenedor-cuerpo {
+            border: 4px double #000000;
+            padding: 30px;
+            background-color: #FFFFFF;
+        }
         h2 {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 0;
-            color: #E67E22;
+            color: #2C3E50;
+            font-weight: bold;
         }
         p {
-            line-height: 1.5;
-            font-size: 14px;
+            line-height: 1.6;
+            font-size: 15px;
         }
         .contenedor-imagen-cuerpo {
             text-align: center;
             margin-top: 25px;
         }
         .imagen-cuerpo {
-            border: 2px solid #B0B0B0;
+            border: 3px solid #000000;
             max-width: 100%;
             height: auto;
         }
         footer {
-            border: 3px solid #B0B0B0;
+            border: 4px solid #000000;
             margin-top: 20px;
             padding: 15px;
             background-color: #FFFFFF;
@@ -93,35 +91,31 @@
 <body>
 
 <header>
-    <img src="vetecare_logo.png" alt="Logotipo VeteCare" width="180">
+    <div class="logo-box">
+        <img src="vetecare_logo.png" alt="Logotipo VeteCare" width="140">
+    </div>
     <h1>SISTEMA DE GESTIÓN VETERINARIA VETECARE</h1>
 </header>
 
-<div class="contenedor-layout">
+<nav>
+    <a href="index.html" class="btn-menu">INICIO</a>
+    <a href="pacientes.html" class="btn-menu">PACIENTES</a>
+    <a href="propietarios.html" class="btn-menu">PROPIETARIOS</a>
+    <a href="alta_historial.html" class="btn-menu">HISTORIAL</a>
+    <a href="alta_consultas.html" class="btn-menu">CONSULTAS</a>
+    <a href="alta_administracion.html" class="btn-menu">ADMINISTRACIÓN</a>
+    <a href="contacto.html" class="btn-menu">CONTACTO</a>
+</nav>
+
+<div class="contenedor-cuerpo">
+    <h2>PRESENTACIÓN INSTITUCIONAL</h2>
+    <p>Bienvenido al Sistema de Gestión de VeteCare. Este portal funciona como la interfaz de acceso principal y consulta de las bases de datos estructuradas en el motor NoSQL MongoDB.</p>
+    <p>A través de la barra de navegación superior, puede acceder de forma independiente a cada uno de los módulos de registro clínico, control de propietarios y auditoría administrativa del centro veterinario.</p>
+    <p>Por favor, seleccione cualquiera de las opciones de arriba para abrir el archivo de datos correspondiente.</p>
     
-    <div class="columna-izquierda">
-        <nav>
-            <a href="index.html" class="btn-menu">INICIO</a>
-            <a href="pacientes.html" class="btn-menu">PACIENTES</a>
-            <a href="propietarios.html" class="btn-menu">PROPIETARIOS</a>
-            <a href="historial.html" class="btn-menu">HISTORIAL</a>
-            <a href="consultas.html" class="btn-menu">CONSULTAS</a>
-            <a href="administracion.html" class="btn-menu">ADMINISTRACIÓN</a>
-            <a href="contacto.html" class="btn-menu">CONTACTO</a>
-        </nav>
+    <div class="contenedor-imagen-cuerpo">
+        <img src="VeteCare_Molly.png" alt="Presentación VeteCare" class="imagen-cuerpo" width="450">
     </div>
-
-    <div class="columna-derecha">
-        <h2>PRESENTACIÓN INSTITUCIONAL</h2>
-        <p>Bienvenido al Sistema de Gestión de VeteCare. Este portal funciona como la interfaz de acceso principal y consulta de las bases de datos estructuradas en el motor NoSQL MongoDB.</p>
-        <p>A través de la barra de navegación lateral, puede acceder de forma independiente a cada uno de los módulos de registro clínico, control de propietarios y auditoría administrativa del centro veterinario.</p>
-        <p>Por favor, seleccione cualquiera de las opciones de la izquierda para abrir el archivo de datos correspondiente.</p>
-        
-        <div class="contenedor-imagen-cuerpo">
-            <img src="VeteCare_Molly.png" alt="Presentación VeteCare" class="imagen-cuerpo" width="450">
-        </div>
-    </div>
-
 </div>
 
 <footer>
